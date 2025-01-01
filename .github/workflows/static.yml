@@ -35,10 +35,10 @@ jobs:
         uses: actions/setup-node@v3
         with: 
           node-version: 18
-      - name: Enable corepack
-        run: corepack enable
+      - name: Install yarn
+        run: npm install --global yarn
       - name: Install dependencies and build to split
-        run: yarn & yarn build
+        run: yarn install && yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
