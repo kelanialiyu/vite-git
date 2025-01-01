@@ -35,7 +35,9 @@ jobs:
         uses: actions/setup-node@v3
         with: 
           node-version: 18,
-          cache: yarn
+          cache: npm
+      - name: Enable corepack
+        run: corepack enable
       - name: Install dependencies and build to split
         run: yarn & yarn build
       - name: Setup Pages
