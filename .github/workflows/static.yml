@@ -34,8 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with: 
-          node-version: 18,
-          cache: npm
+          node-version: 18
       - name: Enable corepack
         run: corepack enable
       - name: Install dependencies and build to split
